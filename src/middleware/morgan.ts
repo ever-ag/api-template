@@ -22,19 +22,17 @@ const morganTokenString =
 
 const morganMiddleware = morgan(morganTokenString, {
     skip(req, res) {
-        {
-            if (
-                res.statusCode >= 400 ||
-                process.env.LOG_SUCCESSFUL_REQUESTS ||
-                req.method === 'POST' ||
-                req.method === 'PATCH' ||
-                req.method === 'PUT' ||
-                req.method === 'DELETE'
-            ) {
-                return false;
-            }
-            return true;
+        if (
+            res.statusCode >= 400 ||
+            process.env.LOG_SUCCESSFUL_REQUESTS ||
+            req.method === 'POST' ||
+            req.method === 'PATCH' ||
+            req.method === 'PUT' ||
+            req.method === 'DELETE'
+        ) {
+            return false;
         }
+        return true;
     },
 });
 

@@ -1,8 +1,12 @@
 {
-    "name": "project-template",
+    "name": "api-template",
     "version": "1.0.0",
-    "description": "A template for an API using express + typescript + passport ",
+    "description": "A template for an API using express + typescript + passport",
     "main": "built/main.js",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/vaultdairy/api-template.git"
+    },
     "scripts": {
         "build": "npm run lint && npm run format && tsc -p .",
         "dev": "nodemon",
@@ -12,8 +16,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node built/main.js"
     },
-    "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",

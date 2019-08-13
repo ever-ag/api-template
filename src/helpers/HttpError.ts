@@ -9,7 +9,7 @@ const getErrorMessage = (statusCode: number) => {
         case 404:
             return 'Requested resource not found.';
         case 422:
-            return 'Requested resource not found.';
+            return 'Unprocessable Entity.';
         default:
             return 'There was an error.';
     }
