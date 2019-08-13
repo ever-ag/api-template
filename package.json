@@ -1,0 +1,44 @@
+{
+    "name": "project-template",
+    "version": "1.0.0",
+    "description": "A template for an API using express + typescript + passport ",
+    "main": "built/main.js",
+    "scripts": {
+        "build": "npm run lint && npm run format && tsc -p .",
+        "dev": "nodemon",
+        "format": "prettier-tslint fix 'src/**/*.ts'",
+        "lint": "tslint -c tslint.json --project tsconfig.json 'src/**/*.ts'",
+        "postinstall": "npm run build",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node built/main.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "morgan": "^1.9.1",
+        "passport": "^0.4.0",
+        "passport-jwt": "^4.0.0",
+        "passport-local": "^1.0.0",
+        "typescript": "^3.5.3"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.17.0",
+        "@types/cors": "^2.8.5",
+        "@types/express": "^4.17.0",
+        "@types/morgan": "^1.7.36",
+        "@types/node": "^12.7.1",
+        "@types/passport": "^1.0.0",
+        "@types/passport-jwt": "^3.0.1",
+        "@types/passport-local": "^1.0.33",
+        "nodemon": "^1.19.1",
+        "prettier": "^1.18.2",
+        "prettier-tslint": "^0.4.2",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.18.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-config-standard": "^8.0.1"
+    }
+}
